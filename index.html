@@ -110,4 +110,5 @@ async function saveMatchCard(){if(!currentMate)return;try{const a=pairAnalysis(p
 async function downloadCanvas(canvas,filename){const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('图片生成失败')),'image/png'));const url=URL.createObjectURL(blob);try{const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove()}finally{setTimeout(()=>URL.revokeObjectURL(url),8000)}}
 
 
+home();
 </script></body></html>
